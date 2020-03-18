@@ -1,0 +1,20 @@
+<div class="card app-example border-primary">
+  <div class="card-body">
+    <h5 class="card-title">Template driven form with control container example.</h5>
+    <form class="user-form col-md-6" autocomplete="off" #userForm="ngForm">
+      <div class="form-group">
+        <label for="id">Id</label>
+        <input type="text" id="id" name="id" class="form-control" ngModel required />
+      </div>
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" class="form-control" ngModel required />
+      </div>
+
+      <label for="">Address</label>
+      <app-template-driven-form-address></app-template-driven-form-address>
+    </form>
+    <div>form valid: {{ userForm.valid }}</div>
+    <pre>{{ userForm.value | json }}</pre>
+  </div>
+</div>
