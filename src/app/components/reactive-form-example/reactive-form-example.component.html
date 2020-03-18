@@ -11,8 +11,15 @@
         <input type="text" id="name" class="form-control" formControlName="name" />
       </div>
 
-      <label for="">Address</label>
-      <app-reactive-form-address></app-reactive-form-address>
+      <div class="form-group">
+        <label for="">Address</label>
+        <app-reactive-form-address></app-reactive-form-address>
+      </div>
+
+      <label for="">Company</label>
+      <div class="form-group card" formGroupName="company">
+        <app-reactive-form-company></app-reactive-form-company>
+      </div>
     </form>
     <div>form valid: {{ userForm.valid }}</div>
     <pre>{{ userForm.value | json }}</pre>

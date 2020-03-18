@@ -11,8 +11,14 @@
         <input type="text" id="name" name="name" class="form-control" ngModel required />
       </div>
 
-      <label for="">Address</label>
-      <app-template-driven-form-address></app-template-driven-form-address>
+      <div class="form-group">
+        <label for="">Address</label>
+        <app-template-driven-form-address></app-template-driven-form-address>
+      </div>
+      <label for="">Company</label>
+      <div class="form-group card" ngModelGroup="company">
+        <app-template-driven-form-company></app-template-driven-form-company>
+      </div>
     </form>
     <div>form valid: {{ userForm.valid }}</div>
     <pre>{{ userForm.value | json }}</pre>

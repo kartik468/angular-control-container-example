@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Optional, Host } from '@angular/core';
 import { ControlContainer, NgForm } from '@angular/forms';
 
 @Component({
@@ -8,9 +8,10 @@ import { ControlContainer, NgForm } from '@angular/forms';
   viewProviders: [{ provide: ControlContainer, useExisting: NgForm }]
 })
 export class TemplateDrivenFormAddressComponent implements OnInit {
-  userForm: NgForm;
-
   constructor() {}
+  // constructor(@Optional() @Host() private userForm: NgForm) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    // console.log(this.userForm);
+  }
 }
